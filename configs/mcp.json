@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yatmo": {
+      "url": "https://mcp.yatmo.com/mcp/v1",
+      "headers": { "LicenceKey": "YOUR_KEY" }
+    }
+  }
+}
