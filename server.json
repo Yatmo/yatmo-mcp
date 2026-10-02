@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.yatmo/yatmo",
+  "title": "Yatmo neighbourhood data for real estate",
+  "description": "Neighbourhood data around any property in 25 countries: nearest school, nursery, supermarket, public transport, train station and motorway with distances and travel times, plus a quotable summary paragraph. Read-only.",
+  "version": "1.0.0",
+  "websiteUrl": "https://documentation.yatmo.com/mcp",
+  "repository": {
+    "url": "https://github.com/Yatmo/yatmo-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.yatmo.com/mcp/v1",
+      "headers": [
+        {
+          "name": "LicenceKey",
+          "description": "Your Yatmo backend licence key (https://yatmo.com). OAuth 2.1 with a consent page is also supported for clients that prefer it.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

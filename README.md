@@ -86,3 +86,7 @@ The assistant answers from the `text` and `facts` of the tools; distances come w
 - The same data for websites: [plugins](https://documentation.yatmo.com/plugins), [WordPress](https://wordpress.org/plugins/yatmo-map/), [Odoo](https://apps.odoo.com/apps/modules/20.0/yatmo_map), [mobile SDKs](https://github.com/Yatmo), [examples](https://github.com/Yatmo/yatmo-examples)
 
 MIT licence for the files of this repository. Yatmo is a paid service for real estate portals, agency networks and developers.
+
+## Directories
+
+The server is published in the [official MCP registry](https://registry.modelcontextprotocol.io) as `com.yatmo/yatmo` (`server.json` in this repository) and submitted to the Docker MCP Catalog, Smithery and mcp.so. In clients that read the registry, search for "yatmo" or "real estate".
