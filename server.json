@@ -3,7 +3,7 @@
   "name": "com.yatmo/yatmo",
   "title": "Yatmo neighbourhood data for real estate",
   "description": "Real estate neighbourhood data: nearest school, shops, transport with travel times, 25 countries.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://documentation.yatmo.com/mcp",
   "repository": {
     "url": "https://github.com/Yatmo/yatmo-mcp",
@@ -17,6 +17,24 @@
         {
           "name": "LicenceKey",
           "description": "Your Yatmo backend licence key (https://yatmo.com). OAuth 2.1 with a consent page is also supported for clients that prefer it.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@yatmo/mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "LicenceKey",
+          "description": "Your Yatmo key (https://yatmo.com).",
           "isRequired": true,
           "isSecret": true
         }
