@@ -1,5 +1,7 @@
 # Yatmo MCP server: neighbourhood data for AI assistants and agents
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/yatmo/yatmo-mcp)
+
 [Yatmo](https://yatmo.com) exposes its neighbourhood intelligence to AI clients through a remote
 [MCP](https://modelcontextprotocol.io) server. Connect Claude, Cursor, VS Code or your own agent, and it can answer
 "what is around this property?" with real data: nearest school, nursery, supermarket, public transport, train station,
