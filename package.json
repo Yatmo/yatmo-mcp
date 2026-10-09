@@ -1,0 +1,25 @@
+{
+  "name": "@yatmo/mcp",
+  "version": "1.0.0",
+  "description": "Yatmo MCP server (local stdio edition): neighbourhood data for AI assistants and agents. Nearest school, nursery, supermarket, public transport, train station and motorway with travel times around any property, in 25 countries.",
+  "type": "module",
+  "bin": { "yatmo-mcp": "src/index.js" },
+  "main": "src/index.js",
+  "files": ["src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/core.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.0"
+  },
+  "keywords": ["mcp", "model-context-protocol", "mcp-server", "real-estate", "neighbourhood", "points-of-interest", "travel-time", "location", "ai", "claude", "yatmo"],
+  "homepage": "https://documentation.yatmo.com/mcp",
+  "repository": { "type": "git", "url": "git+https://github.com/Yatmo/yatmo-mcp.git" },
+  "bugs": { "url": "https://github.com/Yatmo/yatmo-mcp/issues" },
+  "author": "Yatmo <info@yatmo.com> (https://yatmo.com)",
+  "license": "MIT",
+  "mcpName": "com.yatmo/yatmo"
+}

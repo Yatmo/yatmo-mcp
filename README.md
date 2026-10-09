@@ -7,8 +7,9 @@
 "what is around this property?" with real data: nearest school, nursery, supermarket, public transport, train station,
 motorway access, distances with travel times, and a quotable summary paragraph, in 25 countries.
 
-This repository holds ready-to-copy client configurations and a dependency-free quick start. The server itself is
-operated by Yatmo at `https://mcp.yatmo.com/mcp/v1` (Streamable HTTP). Full documentation:
+Two ways to use it: the **hosted server** operated by Yatmo at `https://mcp.yatmo.com/mcp/v1` (Streamable HTTP, nothing to
+install), or the **local edition** in this repository (`npx -y @yatmo/mcp`, stdio), which exposes the same four tools and
+calls the Yatmo API with your key. This repository also holds ready-to-copy client configurations and a quick start. Full documentation:
 [documentation.yatmo.com/mcp](https://documentation.yatmo.com/mcp).
 
 ## The four tools
@@ -64,6 +65,27 @@ claude mcp add --transport http yatmo https://mcp.yatmo.com/mcp/v1 --header "Lic
 **Your own agent** (Anthropic, OpenAI or any LLM SDK): use an MCP client library (TypeScript, Python, .NET, Go) with the
 Streamable HTTP transport, add the `LicenceKey` header to the transport, and forward the four tool definitions to the
 model. [quickstart.py](quickstart.py) shows the raw protocol without any library.
+
+## Run it locally (stdio)
+
+For clients that prefer a local process, or to inspect the code: `@yatmo/mcp` on npm, Node.js 18 or later, two
+dependencies (the official MCP SDK and zod). Same tools, same JSON answers as the hosted server; the key is read from the
+`LicenceKey` environment variable and sent to the Yatmo API only.
+
+```json
+{
+  "mcpServers": {
+    "yatmo": {
+      "command": "npx",
+      "args": ["-y", "@yatmo/mcp"],
+      "env": { "LicenceKey": "YOUR_YATMO_KEY" }
+    }
+  }
+}
+```
+
+From a clone: `npm install`, then `LicenceKey=YOUR_YATMO_KEY node src/index.js`. Tests: `npm test` (mapping checked on a
+real API answer). Listing the tools works without a key; a tool call without one returns a 401 envelope.
 
 ## Try it from the command line
 
